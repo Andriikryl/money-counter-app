@@ -1,0 +1,39 @@
+/* CostItem */
+
+.costitem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #073b4c;
+    border-radius: 20px;
+}
+
+.costitem-date{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: #ffd166;
+    border-radius: 10px;
+    color: #ef476f;
+}
+
+.cost-item__description{
+    font-size: 20px;
+    padding: 1rem;
+    background-color: #118ab2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffd166;
+}
+
+.item-price{
+    padding: 1rem;
+    background-color: #06d6a0;
+    border-radius: 10px;
+    color: #ef476f;
+}
+
+/* CostItem */
