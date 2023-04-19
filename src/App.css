@@ -1,3 +1,11 @@
+:root{
+    --shadov:  0 1px 1px rgba(0,0,0,0.12), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+}
+
 .App{
     max-width: 1400px;
     padding: 2rem;
@@ -13,6 +21,7 @@
     padding: 1rem;
     background-color: #073b4c;
     border-radius: 20px;
+    box-shadow: var(--shadov);
 }
 
 .costitem-date{
@@ -22,6 +31,8 @@
     background-color: #ffd166;
     border-radius: 10px;
     color: #ef476f;
+    box-shadow: var(--shadov);
+    min-width: 200px;
 }
 
 .cost-item__description{
@@ -33,6 +44,8 @@
     flex-direction: column;
     align-items: center;
     color: #ffd166;
+    box-shadow: var(--shadov);
+    min-width: 100px;
 }
 
 .item-price{
@@ -40,6 +53,17 @@
     background-color: #06d6a0;
     border-radius: 10px;
     color: #ef476f;
+    box-shadow: var(--shadov);
+}
+
+.costs-box{
+    background-color: #ef476f;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: var(--shadov);
 }
 
 /* CostItem */

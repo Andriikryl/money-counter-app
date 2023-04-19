@@ -1,8 +1,9 @@
+import Card from "./Card";
 import CostItem from "./CostItem";
 
 function Costs(props) {
   return (
-    <div>
+    <Card className="costs-box">
       <CostItem
         date={props.costs[0].date}
         description={props.costs[0].description}
@@ -18,7 +19,7 @@ function Costs(props) {
         description={props.costs[2].description}
         amount={props.costs[2].amount}
       />
-    </div>
+    </Card>
   );
 }
 
