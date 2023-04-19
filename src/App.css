@@ -6,6 +6,10 @@
     0 16px 16px rgba(0,0,0,0.12);
 }
 
+body{
+    background-color: #faedcd;
+}
+
 .App{
     max-width: 1400px;
     padding: 2rem;
@@ -67,3 +71,94 @@
 }
 
 /* CostItem */
+
+/* NewCost */
+
+.new-cost{
+    background-color: #ccd5ae;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadov);
+    margin-block-end: 20px;
+}
+
+.new-cost__form{
+    background-color: #e9edc9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadov);
+}
+
+.new-cost__controls{
+    padding: 1rem;
+    background-color:#d4a373;
+    border-radius: 10px;
+    box-shadow: var(--shadov);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-cost__control{
+    background-color: #606c38;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 300px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--shadov);
+}
+
+.new-cost__control label{
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.new-cost__control input{
+    box-shadow: var(--shadov);
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+}
+
+.new-cost__actions{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.new-cost__add{
+    padding: 1.5rem 1rem;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #073b4c;
+    cursor: pointer;
+    color: white;
+    transition: all .7s ease-in-out;
+    border-radius: 10px;
+}
+.new-cost__add:hover{
+    background-color: limegreen;
+}
+
+.new-sot-cancel{
+    padding: 1.5rem 1rem;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #073b4c;
+    cursor: pointer;
+    color: white;
+    transition: all .7s ease-in-out;
+    border-radius: 10px;
+}
+.new-sot-cancel:hover{
+    background-color: tomato;
+}
+/* NewCost */
