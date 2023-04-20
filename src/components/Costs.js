@@ -2,32 +2,24 @@ import { useState } from "react";
 import Card from "./Card";
 import CostFilter from "./CostFilter";
 import CostItem from "./CostItem";
+import CostList from "./CostsList";
 
 function Costs(props) {
-  const [selectedYear, setSelectdYear] = useState("2019");
+  const [selectedYear, setSelecetedYear] = useState("2021");
 
   const yearChangeHandler = (year) => {
-    selectedYear(year);
+    setSelecetedYear(year);
   };
+
+  const filteredCosts = props.costs.filter((cost) => {
+    return cost.date.getFullYear().toString() === selectedYear;
+  });
+
   return (
     <div>
-      <CostFilter onChangeYear={yearChangeHandler} year={selectedYear} />
       <Card className="costs-box">
-        <CostItem
-          date={props.costs[0].date}
-          description={props.costs[0].description}
-          amount={props.costs[0].amount}
-        />
-        <CostItem
-          date={props.costs[1].date}
-          description={props.costs[1].description}
-          amount={props.costs[1].amount}
-        />
-        <CostItem
-          date={props.costs[2].date}
-          description={props.costs[2].description}
-          amount={props.costs[2].amount}
-        />
+        <CostFilter onChangeYear={yearChangeHandler} year={selectedYear} />
+        <CostList costs={filteredCosts} />
       </Card>
     </div>
   );
