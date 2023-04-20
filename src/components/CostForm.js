@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CostForm() {
+function CostForm(props) {
   const [inputName, setInputName] = useState("");
   const [inputAmount, setInputAmount] = useState("");
   const [inputDate, setInputDate] = useState("");
@@ -47,6 +47,8 @@ function CostForm() {
       amount: inputAmount,
       date: new Date(inputDate),
     };
+
+    props.onSaveCostData(costData);
     setInputName("");
     setInputAmount("");
     setInputDate("");
