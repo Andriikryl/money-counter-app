@@ -85,7 +85,13 @@ function CostForm(props) {
           <button className="new-cost__add" type="submit">
             Add
           </button>
-          <button className="new-sot-cancel">cancel</button>
+          <button
+            onClick={props.onCancel}
+            type="button"
+            className="new-sot-cancel"
+          >
+            cancel
+          </button>
         </div>
       </div>
     </form>

@@ -1,6 +1,9 @@
+import { useState } from "react";
 import CostForm from "./CostForm";
 
 function NewCost(props) {
+  const [isFormVisible, setFormVisible] = useState(false);
+
   const saveCostDataHandler = (inputCostData) => {
     const costData = {
       ...inputCostData,
@@ -9,9 +12,24 @@ function NewCost(props) {
     props.onAddCost(costData);
   };
 
+  const inputConstDataHandler = () => {
+    setFormVisible(true);
+  };
+
+  const cancelCostHandler = () => {
+    setFormVisible(false);
+  };
+
   return (
     <div className="new-cost">
-      <CostForm onSaveCostData={saveCostDataHandler} />
+      {isFormVisible === false ? (
+        <button onClick={inputConstDataHandler}>Add new stuff</button>
+      ) : (
+        <CostForm
+          onSaveCostData={saveCostDataHandler}
+          onCancel={cancelCostHandler}
+        />
+      )}
     </div>
   );
 }
